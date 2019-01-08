@@ -54,7 +54,11 @@
 
         <!-- Display bookmark.user_id start -->
         <td>
-          <%= bookmark.user.created_at %>
+          <% if bookmark.user.present? %>
+            <a href="/users/<%= bookmark.user.id %>">
+              <%= bookmark.user.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display bookmark.user_id end -->
 
