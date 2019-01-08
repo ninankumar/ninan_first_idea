@@ -1,6 +1,6 @@
 class WatchListsController < ApplicationController
   def index
-    @watch_lists = WatchList.all
+    @watch_lists = WatchList.page(params[:page]).per(10)
 
     render("watch_list_templates/index.html.erb")
   end
