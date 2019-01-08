@@ -1,0 +1,65 @@
+<!-- Validation failure messages -->
+<% if @role.errors.any? %>
+  <% @role.errors.full_messages.each do |message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<h1>
+  Edit role #<%= @role.id %>
+</h1>
+
+<hr>
+
+<!-- Form role start -->
+<form action="/update_role/<%= @role.id %>" method="post">
+<!-- Form role end -->
+
+  <!-- Label and input for movied_id start -->
+  <div class="form-group">
+    <label for="movied_id">
+      Movied
+    </label>
+
+    <!-- Input for movied_id start -->
+    <input type="text" id="movied_id" name="movied_id" class="form-control" value="<%= @role.movied_id %>">
+    <!-- Input for movied_id end -->
+  </div>
+  <!-- Label and input for movied_id end -->
+
+  <!-- Label and input for actors_id start -->
+  <div class="form-group">
+    <label for="actors_id">
+      Actors
+    </label>
+
+    <!-- Input for actors_id start -->
+    <input type="text" id="actors_id" name="actors_id" class="form-control" value="<%= @role.actors_id %>">
+    <!-- Input for actors_id end -->
+  </div>
+  <!-- Label and input for actors_id end -->
+
+  <!-- Label and input for characters_id start -->
+  <div class="form-group">
+    <label for="characters_id">
+      Characters
+    </label>
+
+    <!-- Input for characters_id start -->
+    <input type="text" id="characters_id" name="characters_id" class="form-control" value="<%= @role.characters_id %>">
+    <!-- Input for characters_id end -->
+  </div>
+  <!-- Label and input for characters_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update role
+  </button>
+</form>
+
+<hr>
+
+<a href="/roles">
+  Go back
+</a>
