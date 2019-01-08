@@ -11,53 +11,41 @@
         </a>
       </div>
 
-      <!-- Edit link watch_list start -->
       <div class="col">
         <a href="/watch_lists/<%= @watch_list.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit watch list
         </a>
       </div>
-      <!-- Edit link watch_list end -->
 
-      <!-- Delete link watch_list start -->
       <div class="col">
         <a href="/delete_watch_list/<%= @watch_list.id %>" class="btn btn-block btn-outline-secondary">
           Delete watch list
         </a>
       </div>
-      <!-- Delete link watch_list end -->
     </div>
 
     <dl>
       <dt>
         Watchlist
       </dt>
-      <!-- Display watchlist_id start -->
       <dd>
         <%= @watch_list.watchlist_id %>
       </dd>
-      <!-- Display watchlist_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@watch_list.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@watch_list.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

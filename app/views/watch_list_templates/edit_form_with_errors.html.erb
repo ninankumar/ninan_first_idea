@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @watch_list.errors.any? %>
   <% @watch_list.errors.full_messages.each do |message| %>
     <div class="alert">
@@ -13,21 +12,15 @@
 
 <hr>
 
-<!-- Form watch_list start -->
 <form action="/update_watch_list/<%= @watch_list.id %>" method="post">
-<!-- Form watch_list end -->
 
-  <!-- Label and input for watchlist_id start -->
   <div class="form-group">
     <label for="watchlist_id">
       Watchlist
     </label>
 
-    <!-- Input for watchlist_id start -->
     <input type="text" id="watchlist_id" name="watchlist_id" class="form-control" value="<%= @watch_list.watchlist_id %>">
-    <!-- Input for watchlist_id end -->
   </div>
-  <!-- Label and input for watchlist_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update watch list

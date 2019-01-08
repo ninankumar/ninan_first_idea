@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link role start -->
       <div class="col">
         <a href="/roles/<%= @role.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit role
         </a>
       </div>
-      <!-- Edit link role end -->
 
-      <!-- Delete link role start -->
       <div class="col">
         <a href="/delete_role/<%= @role.id %>" class="btn btn-block btn-outline-secondary">
           Delete role
         </a>
       </div>
-      <!-- Delete link role end -->
     </div>
 
     <dl>
       <dt>
         Movied
       </dt>
-      <!-- Display movied_id start -->
       <dd>
         <% if @role.movied.present? %>
           <a href="/movies/<%= @role.movied_id %>">
@@ -40,12 +35,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display movied_id end -->
 
       <dt>
         Actors
       </dt>
-      <!-- Display actors_id start -->
       <dd>
         <% if @role.actors.present? %>
           <a href="/actors/<%= @role.actors_id %>">
@@ -53,37 +46,28 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display actors_id end -->
 
       <dt>
         Characters
       </dt>
-      <!-- Display characters_id start -->
       <dd>
         <%= @role.characters_id %>
       </dd>
-      <!-- Display characters_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@role.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@role.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->
