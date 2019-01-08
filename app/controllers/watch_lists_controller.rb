@@ -1,6 +1,7 @@
 class WatchListsController < ApplicationController
   def index
-    @watch_lists = WatchList.page(params[:page]).per(10)
+    @q = WatchList.ransack(params[:q])
+    @watch_lists = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("watch_list_templates/index.html.erb")
   end
