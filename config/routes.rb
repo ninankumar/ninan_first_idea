@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Watch list resource:
+
+  # CREATE
+  get("/watch_lists/new", { :controller => "watch_lists", :action => "new_form" })
+  post("/create_watch_list", { :controller => "watch_lists", :action => "create_row" })
+
+  # READ
+  get("/watch_lists", { :controller => "watch_lists", :action => "index" })
+  get("/watch_lists/:id_to_display", { :controller => "watch_lists", :action => "show" })
+
+  # UPDATE
+  get("/watch_lists/:prefill_with_id/edit", { :controller => "watch_lists", :action => "edit_form" })
+  post("/update_watch_list/:id_to_modify", { :controller => "watch_lists", :action => "update_row" })
+
+  # DELETE
+  get("/delete_watch_list/:id_to_remove", { :controller => "watch_lists", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the User resource:
 
   # CREATE
