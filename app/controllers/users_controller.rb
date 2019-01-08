@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @bookmark = Bookmark.new
     @user = User.find(params.fetch("id_to_display"))
 
     render("user_templates/show.html.erb")

@@ -1,0 +1,37 @@
+<!-- Form role start -->
+<form action="/create_role_from_actor" method="post">
+<!-- Form role end -->
+
+  <!-- Label and input for movied_id start -->
+  <div class="form-group">
+    <label for="movied_id">
+      Movied
+    </label>
+
+    <!-- Input for movied_id start -->
+    <input type="text" id="movied_id" name="movied_id" class="form-control" value="<%= @role.movied_id %>">
+    <!-- Input for movied_id end -->
+  </div>
+  <!-- Label and input for movied_id end -->
+
+  <!-- Label and input for actors_id start -->
+  <!-- Input for actors_id start -->
+  <input type="hidden" name="actors_id" value="<%= @actor.id %>">
+  <!-- Input for actors_id end -->
+
+  <!-- Label and input for characters_id start -->
+  <div class="form-group">
+    <label for="characters_id">
+      Characters
+    </label>
+
+    <!-- Input for characters_id start -->
+    <input type="text" id="characters_id" name="characters_id" class="form-control" value="<%= @role.characters_id %>">
+    <!-- Input for characters_id end -->
+  </div>
+  <!-- Label and input for characters_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create role
+  </button>
+</form>
